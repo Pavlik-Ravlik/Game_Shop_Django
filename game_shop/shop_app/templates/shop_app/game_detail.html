@@ -8,8 +8,14 @@
 <div class="game-details">
     <h3 class="game-title">{{ game_detail.title }}</h3>
 
-    <div class="game-info">
-        <img src="/media/{{game_detail.path}}" alt="Poster" width="200" height="300">
+    <div class='game-detailes-info'>
+        <div class="game-info">
+            <img src="/media/{{game_detail.path}}" alt="Poster" width="200" height="300">
+            <p><strong>Price:</strong> {{ game_detail.price }} $</p>
+            <button type="submit" > Buy</button>       
+        </div>
+    
+    <div>
         <p><strong>Date of realise:</strong> {{ game_detail.date_of_release }}</p>
         <p><strong>Genre:</strong> {{ game_detail.genre }}</p>
         <p><strong>Platform:</strong> {{ game_detail.platform }}</p>
@@ -17,11 +23,10 @@
         <p><strong>Memory:</strong> {{ game_detail.memory_requirements }}</p>
         <p><strong>GPU:</strong> {{ game_detail.graphics_card_requirements }}</p>
         <p><strong>Free space on disc:</strong> {{ game_detail.disk_space_requirements }}</p>
-        <p><strong>Price:</strong> {{ game_detail.price }} $</p>
-        <button type="submit"> Buy</button>
-        <p><strong>Description:</strong> {{ game_detail.game_description }}</p>
-        
-        
     </div>
+
+    </div>
+    <p><strong>Description:</strong> {{ game_detail.game_description }}</p>
 </div>
+</main>
 {% endblock %}

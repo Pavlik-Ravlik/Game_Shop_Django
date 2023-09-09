@@ -126,16 +126,16 @@ header {
   display: flex;
 }
 .item {
-  height: 200px;
+  /* height: 200px; */
   width: 100%;
-  border: dotted 1px rgb(0, 102, 255);
+  /* border: dotted 1px rgb(0, 102, 255); */
   border-bottom: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   flex-basis: calc((100% - 30px) / 4);
-  box-shadow: 4px 4px 2px #bcbcbc;
+  /* box-shadow: 4px 4px 2px #bcbcbc; */
   transition-property: transform;
   transition-duration: 100ms;
 }
@@ -152,10 +152,10 @@ header {
 }
 .game-description {
   width: 100%;
-  background-color: beige;
-  border: dotted 1px rgb(0, 102, 255);
-  border-top: none;
-  padding: 5px;
+  /* background-color: beige; */
+  /* border: dotted 1px rgb(0, 102, 255); */
+  /* border-top: none; */
+  /* padding: 5px; */
   text-align: center;
 }
 .main-menu-wrap {
@@ -167,8 +167,8 @@ header {
   flex-grow: 1;
   flex-basis: 300px;
   align-self: start;
-  position: sticky;
-  top: 177px;
+  /* position: sticky; */
+  /* top: 177px; */
 
   display: flex;
   flex-direction: column;
@@ -184,11 +184,25 @@ header {
   width: 100%;
   border-radius: 5%;
   text-align: center;
-  background-color: #167235;
+  background-color: #000000;
   padding: 5px;
   transition-property: transform;
   transition-duration: 100ms;
 }
+
+.game-detailes-info{
+  display: flex;
+}
+
+.game-info{
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
+.game-title{
+  font-size: 15px;
+}
+
 .menu-item:hover {
   transform: scale(1.05);
 }
@@ -200,6 +214,11 @@ header {
 .btn-pagination {
   display: flex;
   justify-content: space-between;
+}
+
+.previous, .next{
+  margin-right: 150px;
+
 }
 
 footer > .container {

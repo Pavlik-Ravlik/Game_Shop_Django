@@ -11,7 +11,7 @@
           <img src="/media/{{game.path}}" alt="Poster" width='161' height='230'>
           <div class="game-description">
             <a href="/{{game.title}}">
-          <h3 class="game-title">{{game.title}}</h3>
+          <p class="game-title">{{game.title}}</p>
         </a> 
           <p class="game-price">$ {{game.price}}</p>
           </div>
@@ -20,19 +20,20 @@
     
     <div class="btn-pagination">
         {% if games.has_previous %}
-        <li class="previous">
+        <div class="previous">
             <a href="{% url 'shop_app:main_paginate' games.previous_page_number %}">
                 <span aria-hidden="true">←</span> Previous
             </a>
-        </li>
+          </div>
         {% endif %}
+
         {% if games.has_next %}
-        <li class="next">
+        <div class="next">
             <a href="{% url 'shop_app:main_paginate' games.next_page_number %}">Next
                 <span aria-hidden="true">→</span>
             </a>
-        </li>
+          </div>
         {% endif %}
-    </div>
+      </div>
           
 {% endblock %}

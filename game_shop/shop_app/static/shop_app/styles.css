@@ -62,6 +62,7 @@ header {
   text-decoration: none;
 }
 .login-wrap {
+  
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -71,12 +72,12 @@ header {
 }
 .input-line {
   max-width: 100%;
-  background-color: var(--brand-color);
+  background-color: #167235;
   padding: 10px 0px;
 }
 
 .input-wrap {
-  background: #ffeb7a;
+  background: #167235;
   position: relative;
 }
 .input-wrap:after {
@@ -129,7 +130,6 @@ header {
   width: 100%;
   border: dotted 1px rgb(0, 102, 255);
   border-bottom: none;
-  background-color: aquamarine;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -184,7 +184,7 @@ header {
   width: 100%;
   border-radius: 5%;
   text-align: center;
-  background-color: var(--brand-color);
+  background-color: #167235;
   padding: 5px;
   transition-property: transform;
   transition-duration: 100ms;
@@ -193,7 +193,7 @@ header {
   transform: scale(1.05);
 }
 .menu-item a {
-  color: rgb(0, 66, 124);
+  color: rgb(255, 253, 253);
   text-decoration: none;
 }
 
@@ -203,8 +203,8 @@ header {
 }
 
 footer > .container {
-  background-color: #00ff22;
-  color: #324b4e;
+  background-color: #167235;
+  color: #ffffff;
   text-align: center;
   padding: 10px;
 }

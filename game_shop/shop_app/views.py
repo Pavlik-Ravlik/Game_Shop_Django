@@ -12,7 +12,7 @@ def main(request, page=1):
 
 def game_detail(request, game_title):
     game = get_object_or_404(Game, title=game_title)
-    return render(request, 'shop_app/game_detail.html', context={'game', game})
+    return render(request, 'shop_app/game_detail.html', context={'game_detail': game})
 
 
 def search_results(request):

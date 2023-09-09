@@ -1,10 +1,21 @@
-{% extends 'shop_app/base.html'%} 
+{% extends 'shop_app/base.html' %}
 {% block content %}
 
 <div class="game-details">
-    <h3 class="game-title">{{game.title}}</h3>
-    <p><strong>Date of realise:</strong> <span class="date-of-realise">{{game.date_of_realise}}</span>
-</div>
+    <h3 class="game-title">{{ game_detail.title }}</h3>
 
-<div class="clr"></div>
-{%endblock%}
+    <div class="game-info">
+        <img src="/media/{{game_detail.path}}" alt="Poster" width="200" height="300">
+        <p><strong>Date of realise:</strong> {{ game_detail.date_of_realise|date:"d M Y" }}</p>
+        <p><strong>Genre:</strong> {{ game_detail.genre }}</p>
+        <p><strong>Platform:</strong> {{ game_detail.platform }}</p>
+        <p><strong>OC:</strong> {{ game_detail.os_requirements }}</p>
+        <p><strong>Memory:</strong> {{ game_detail.memory_requirements }}</p>
+        <p><strong>GPU:</strong> {{ game_detail.graphics_card_requirements }}</p>
+        <p><strong>Space:</strong> {{ game_detail.disk_space_requirements }}</p>
+        <p><strong>Price:</strong> {{ game_detail.price }} $</p>
+        <p><strong>Description:</strong> {{ game_detail.game_description }}</p>
+        
+    </div>
+</div>
+{% endblock %}

@@ -1,5 +1,5 @@
 {% extends 'shop_app/base.html' %} 
-{% block content %}
+{% block result %}
 
 <main>
     <div class="container">
@@ -9,7 +9,7 @@
     {%for game in results%}
       <li class="item">
         <a href="" > 
-          <img src="/media/{{game.path}}" alt="Poster">
+          <img src="/media/{{game.path}}" alt="Poster" width='161' height='230'>
         </a> 
           <div class="game-description">
           <h3 class="game-title">{{game.title}}</h3>

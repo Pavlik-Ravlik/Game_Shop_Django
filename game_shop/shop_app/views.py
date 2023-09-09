@@ -15,3 +15,8 @@ def game_detail(request, game_title):
     return render(request, 'shop_app/game_detail.html', context={'game', game})
 
 
+def search_results(request):
+    query = request.GET.get('q')
+    results = Game.objects.filter(title__icontains=query)  # Ищем игры, в названии которых есть текст из запроса
+    return render(request, 'shop_app/search_results.html', {'results': results})
+

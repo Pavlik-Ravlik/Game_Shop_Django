@@ -24,3 +24,49 @@ class Game(models.Model):
 
     def __str__(self):
         return self.title
+    
+
+
+# Импортируйте модели
+from your_app.models import Game, Genre
+
+# Данные из вашего объекта
+data = {
+    "img": "uploads/Калибр (Caliber).jpg",
+    "title": "Калибр (Caliber)",
+    "price": 100,
+    "date_of_release": "2023-06-18",
+    "game_description": "...",
+    "Жанр": "Action, MMOFPS, Симулятор, Shooter, Online",
+    # Другие поля...
+}
+
+# Разделите жанры
+genre_names = data["Жанр"].split(", ")
+
+# Попробуйте найти существующие жанры или создать новые
+genres = []
+for genre_name in genre_names:
+    genre, created = Genre.objects.get_or_create(name=genre_name)
+    genres.append(genre)
+
+# Создайте или обновите запись Game
+game, created = Game.objects.get_or_create(
+    title=data["title"],
+    defaults={
+        "path": data["img"],
+        "price": data["price"],
+        "date_of_release": data["date_of_release"],
+        "game_description": data["game_description"],
+        # Другие поля...
+    }
+)
+
+# Установите связи с жанрами
+game.genre.set(genres)
+
+# Выведите информацию о созданной или обновленной игре
+if created:
+    print(f"Создана новая игра: {game.title}")
+else:
+    print(f"Игра обновлена: {game.title}")

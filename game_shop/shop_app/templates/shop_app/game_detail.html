@@ -6,7 +6,7 @@
 
     <div class="game-info">
         <img src="/media/{{game_detail.path}}" alt="Poster" width="200" height="300">
-        <p><strong>Date of realise:</strong> {{ game_detail.date_of_realise|date:"d M Y" }}</p>
+        <p><strong>Date of realise:</strong> {{ game_detail.date_of_release }}</p>
         <p><strong>Genre:</strong> {{ game_detail.genre }}</p>
         <p><strong>Platform:</strong> {{ game_detail.platform }}</p>
         <p><strong>OC:</strong> {{ game_detail.os_requirements }}</p>
@@ -14,7 +14,9 @@
         <p><strong>GPU:</strong> {{ game_detail.graphics_card_requirements }}</p>
         <p><strong>Space:</strong> {{ game_detail.disk_space_requirements }}</p>
         <p><strong>Price:</strong> {{ game_detail.price }} $</p>
+        <button type="submit"> Buy</button>
         <p><strong>Description:</strong> {{ game_detail.game_description }}</p>
+        
         
     </div>
 </div>

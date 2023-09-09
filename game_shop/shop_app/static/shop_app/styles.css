@@ -1,0 +1,234 @@
+:root {
+  --brand-color: #92fa00;
+}
+h3 {
+  margin: 10px 0 0 0;
+}
+p {
+  margin: 5px 0 0 0;
+}
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+.container {
+  max-width: 991px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.title {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.title-wrap {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  position: relative;
+  font-size: 40px;
+}
+.logo > span {
+  color: blue;
+  font-style: italic;
+  font-weight: 800;
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  text-shadow: 4px 4px 2px #bcbcbc;
+}
+.login {
+  font-size: 20px;
+  text-align: right;
+  text-decoration: none;
+}
+.login-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.search {
+  text-align: center;
+}
+.input-line {
+  max-width: 100%;
+  background-color: var(--brand-color);
+  padding: 10px 0px;
+}
+
+.input-wrap {
+  background: #ffeb7a;
+  position: relative;
+}
+.input-wrap:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.input-wrap form {
+  width: auto;
+  float: right;
+  margin-right: 30px;
+}
+.input-wrap input {
+  width: 250px;
+  height: 42px;
+  padding-left: 15px;
+  border-radius: 42px;
+  border: 2px solid #00ff22;
+  background: #f9f0da;
+  outline: none;
+  position: relative;
+  transition: 0.3s linear;
+}
+.input-wrap input:focus {
+  width: 300px;
+}
+.input-wrap button {
+  width: 42px;
+  height: 42px;
+  background: none;
+  border: none;
+  position: absolute;
+  top: -2px;
+  right: 30px;
+}
+.input-wrap button:before {
+  /* content: '\f002'; */
+  content: "\1F50E";
+  font-family: "Font Awesome 5 Free";
+  color: #324b4e;
+}
+.main {
+  margin-top: 140px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+}
+.item {
+  height: 200px;
+  width: 100%;
+  border: dotted 1px rgb(0, 102, 255);
+  border-bottom: none;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: calc((100% - 30px) / 4);
+  box-shadow: 4px 4px 2px #bcbcbc;
+  transition-property: transform;
+  transition-duration: 100ms;
+}
+.item:hover {
+  transform: scale(1.05);
+}
+.card {
+  flex: 4;
+}
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.game-description {
+  width: 100%;
+  background-color: beige;
+  border: dotted 1px rgb(0, 102, 255);
+  border-top: none;
+  padding: 5px;
+  text-align: center;
+}
+.main-menu-wrap {
+  position: relative;
+  flex: 1;
+}
+
+.main-menu {
+  flex-grow: 1;
+  flex-basis: 300px;
+  align-self: start;
+  position: sticky;
+  top: 177px;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 15px;
+  padding-top: 0px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.menu-item {
+  width: 100%;
+  border-radius: 5%;
+  text-align: center;
+  background-color: var(--brand-color);
+  padding: 5px;
+  transition-property: transform;
+  transition-duration: 100ms;
+}
+.menu-item:hover {
+  transform: scale(1.05);
+}
+.menu-item a {
+  color: rgb(0, 66, 124);
+  text-decoration: none;
+}
+
+.btn-pagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer > .container {
+  background-color: #00ff22;
+  color: #324b4e;
+  text-align: center;
+  padding: 10px;
+}
+
+/* --------------------------------------------------------------------------------------------------------Media-------------- */
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+}
+
+@media (max-width: 650) {
+}

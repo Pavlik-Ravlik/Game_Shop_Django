@@ -1,16 +1,37 @@
 {% extends 'shop_app/base.html' %} 
 {% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game_shop</title>
-</head>
-<body>
-    
-</body>
-</html>
-
+<main>
+    <div class="container">
+      <section class="main">
+        <div class="card">
+        <ul class="card-set">
+    {%for game in games%}
+      <li class="item">
+        <a href="" > 
+          <img src="/media/{{game.path}}" alt="Poster">
+        </a> 
+          <div class="game-description">
+          <h3 class="game-title">{{game.title}}</h3>
+          <p class="game-price">$ {{game.price}}</p>
+          </div>
+        </li>
+    {% endfor %}
+    <div class="btn-pagination">
+        {% if games.has_previous %}
+        <li class="previous">
+            <a href="{% url 'shop_app:main_paginate' games.previous_page_number %}">
+                <span aria-hidden="true">←</span> Previous
+            </a>
+        </li>
+        {% endif %}
+        {% if games.has_next %}
+        <li class="next">
+            <a href="{% url 'shop_app:main_paginate' games.next_page_number %}">Next
+                <span aria-hidden="true">→</span>
+            </a>
+        </li>
+        {% endif %}
+      </div>
+          
 {% endblock %}

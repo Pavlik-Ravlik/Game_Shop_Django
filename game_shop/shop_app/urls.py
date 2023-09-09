@@ -6,4 +6,5 @@ app_name = "shop_app"
 
 urlpatterns = [
     path("", views.main, name="main"),
+    path("<int:page>", views.main, name="main_paginate")
 ]

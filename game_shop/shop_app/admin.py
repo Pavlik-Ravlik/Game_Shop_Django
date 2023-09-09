@@ -1,5 +1,4 @@
 from django.contrib import admin
-from .models import Game, SystemRequirements
+from .models import Game
 
 admin.site.register(Game)
-admin.site.register(SystemRequirements)

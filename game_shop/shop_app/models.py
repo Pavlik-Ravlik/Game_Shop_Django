@@ -1,24 +1,22 @@
 from django.db import models
-from PIL import Image
+
+
+
 
 class Game(models.Model):
-    name = models.CharField(max_length=50, unique=True)
-    price = models.IntegerField()
-    game_description = models.CharField(max_length=500)
-    date_of_release = models.DateTimeField()
-    image = models.ImageField(upload_to='images/')
-    category = models.CharField(max_length=15, null=False)
-    
-    def __str__(self):
-        return self.name
+    path = models.ImageField(upload_to='uploads/', default='')
+    title = models.CharField(max_length=255, null=True)
+    price = models.PositiveIntegerField(null=True)
+    date_of_release = models.DateField(null=True)
+    game_description = models.TextField(null=True)
+    date_updated = models.CharField(max_length=4, null=True)
+    genre = models.CharField(max_length=255, null=True)
+    platform = models.CharField(max_length=50, null=True)
+    os_requirements = models.TextField(null=True)
+    processor_requirements = models.CharField(max_length=255, null=True)
+    memory_requirements = models.CharField(max_length=255, null=True)
+    graphics_card_requirements = models.CharField(max_length=255, null=True)
+    disk_space_requirements = models.CharField(max_length=255, null=True)
 
-class SystemRequirements(models.Model):
-    operating_system = models.CharField(max_length=30)
-    CPU = models.CharField(max_length=20)
-    RAM = models.CharField(max_length=10)
-    video_card = models.CharField(max_length=20)
-    free_space = models.CharField(max_length=25)
-    game = models.OneToOneField(Game, on_delete=models.CASCADE, null=False)
-    
     def __str__(self):
-        return self.game.name
+        return self.title

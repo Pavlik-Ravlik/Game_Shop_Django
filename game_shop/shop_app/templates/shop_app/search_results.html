@@ -8,11 +8,11 @@
         <ul class="card-set">
     {%for game in results%}
       <li class="item">
-        <a href="" > 
           <img src="/media/{{game.path}}" alt="Poster" width='161' height='230'>
-        </a> 
           <div class="game-description">
+            <a href="/{{game.title}}">
           <h3 class="game-title">{{game.title}}</h3>
+        </a> 
           <p class="game-price">$ {{game.price}}</p>
           </div>
         </li>

@@ -72,12 +72,12 @@ header {
 }
 .input-line {
   max-width: 100%;
-  background-color: #167235;
+  background-color: #000000;
   padding: 10px 0px;
 }
 
 .input-wrap {
-  background: #167235;
+  background: #000000;
   position: relative;
 }
 .input-wrap:after {
@@ -226,6 +226,10 @@ footer > .container {
   color: #ffffff;
   text-align: center;
   padding: 10px;
+}
+
+footer{
+  background-color: black;
 }
 
 /* --------------------------------------------------------------------------------------------------------Media-------------- */

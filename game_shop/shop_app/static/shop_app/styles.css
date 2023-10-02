@@ -1,5 +1,5 @@
 :root {
-  --brand-color: #92fa00;
+  --brand-color: #000000;
 }
 h3 {
   margin: 10px 0 0 0;
@@ -24,7 +24,7 @@ li {
   max-width: 991px;
   margin: 0 auto;
   padding: 0 15px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 header {
@@ -48,7 +48,7 @@ header {
   font-size: 40px;
 }
 .logo > span {
-  color: blue;
+  color: rgb(49, 3, 253);
   font-style: italic;
   font-weight: 800;
   position: absolute;
@@ -56,7 +56,14 @@ header {
   left: 100px;
   text-shadow: 4px 4px 2px #bcbcbc;
 }
+
 .login {
+  font-size: 20px;
+  text-align: right;
+  text-decoration: none;
+}
+
+.signup {
   font-size: 20px;
   text-align: right;
   text-decoration: none;
@@ -72,19 +79,21 @@ header {
 }
 .input-line {
   max-width: 100%;
-  background-color: #000000;
+  background-color: rgb(27, 122, 75);
   padding: 10px 0px;
 }
 
 .input-wrap {
-  background: #000000;
+  background: rgb(27, 122, 75);
   position: relative;
 }
 .input-wrap:after {
   content: "";
   clear: both;
   display: table;
+
 }
+
 .input-wrap form {
   width: auto;
   float: right;
@@ -95,7 +104,7 @@ header {
   height: 42px;
   padding-left: 15px;
   border-radius: 42px;
-  border: 2px solid #00ff22;
+  border: 2px solid rgb(55, 0, 255);
   background: #f9f0da;
   outline: none;
   position: relative;
@@ -117,7 +126,7 @@ header {
   /* content: '\f002'; */
   content: "\1F50E";
   font-family: "Font Awesome 5 Free";
-  color: #324b4e;
+  color: #000000;
 }
 .main {
   margin-top: 140px;
@@ -184,7 +193,7 @@ header {
   width: 100%;
   border-radius: 5%;
   text-align: center;
-  background-color: #000000;
+  background-color:  rgb(27, 122, 75);
   padding: 5px;
   transition-property: transform;
   transition-duration: 100ms;
@@ -221,15 +230,17 @@ header {
 
 }
 
+
+
 footer > .container {
-  background-color: #000000;
+  background-color: rgb(27, 122, 75);
   color: #ffffff;
   text-align: center;
   padding: 10px;
 }
 
 footer{
-  background-color: black;
+  background-color: rgb(27, 122, 75);
 }
 
 /* --------------------------------------------------------------------------------------------------------Media-------------- */

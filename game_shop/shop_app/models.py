@@ -1,16 +1,20 @@
 from django.db import models
 
 
+class Genre(models.Model):
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
 
 
 class Game(models.Model):
     path = models.ImageField(upload_to='uploads/', default='')
-    title = models.CharField(max_length=255, null=True)
+    title = models.CharField(max_length=255, null=True, unique=True)
     price = models.PositiveIntegerField(null=True)
     date_of_release = models.DateField(null=True)
     game_description = models.TextField(null=True)
-    date_updated = models.CharField(max_length=4, null=True)
-    genre = models.CharField(max_length=255, null=True)
+    genre = models.ManyToManyField(Genre)
     platform = models.CharField(max_length=50, null=True)
     os_requirements = models.TextField(null=True)
     processor_requirements = models.CharField(max_length=255, null=True)
@@ -20,3 +24,4 @@ class Game(models.Model):
 
     def __str__(self):
         return self.title
+

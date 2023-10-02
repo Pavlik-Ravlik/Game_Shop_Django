@@ -17,7 +17,11 @@
     
     <div>
         <p><strong>Date of realise:</strong> {{ game_detail.date_of_release }}</p>
-        <p><strong>Genre:</strong> {{ game_detail.genre }}</p>
+        <p><strong>Genre:</strong>
+        {% for genre in game_detail.genre.all %}
+            {{ genre.name }}
+            {% if not forloop.last %}, {% endif %}
+        {% endfor %}</p>
         <p><strong>Platform:</strong> {{ game_detail.platform }}</p>
         <p><strong>OC:</strong> {{ game_detail.os_requirements }}</p>
         <p><strong>Memory:</strong> {{ game_detail.memory_requirements }}</p>

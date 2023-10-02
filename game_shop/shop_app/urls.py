@@ -7,5 +7,6 @@ urlpatterns = [
     path("", views.main, name="main"),
     path("<int:page>", views.main, name="main_paginate"), 
     path("search/", views.search_results, name="search_result"),
-    path("<str:game_title>/", views.game_detail, name="game_detail"), 
+    path("<str:game_title>/", views.game_detail, name="game_detail"),
+    path('genre/<int:genre_id>/', views.genre_detail, name='genre_detail'), 
 ]

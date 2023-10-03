@@ -113,6 +113,11 @@ header {
 .input-wrap input:focus {
   width: 300px;
 }
+
+.search {
+  position: relative;
+}
+
 .input-wrap button {
   width: 42px;
   height: 42px;
@@ -120,7 +125,7 @@ header {
   border: none;
   position: absolute;
   top: -2px;
-  right: 30px;
+  right: 7px;
 }
 .input-wrap button:before {
   /* content: '\f002'; */
@@ -133,7 +138,9 @@ header {
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
+  min-height: 80vh;
 }
+
 .item {
   /* height: 200px; */
   width: 100%;
@@ -176,8 +183,8 @@ header {
   flex-grow: 1;
   flex-basis: 300px;
   align-self: start;
-  /* position: sticky; */
-  /* top: 177px; */
+  position: sticky;
+  top: 177px;
 
   display: flex;
   flex-direction: column;
@@ -223,20 +230,33 @@ header {
 .btn-pagination {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
-.previous, .next{
-  margin-right: 150px;
-
+.btn-pagination > a {
+  border: 1px solid #ff0101;
+  border-color: #000000;
+  border-radius: 15px;
+  padding: 5px 15px;
+  text-decoration: none;
+  
 }
 
+.btn-pagination > a:hover {
+  background-color: rgb(27, 122, 75);
+  color:rgb(255, 255, 255)
+}
 
-
-footer > .container {
+footer {
   background-color: rgb(27, 122, 75);
   color: #ffffff;
   text-align: center;
   padding: 10px;
+  /* position: fixed; */
+  /* left: 0;
+  bottom: 0; */
+  width: 100%;
+
 }
 
 footer{

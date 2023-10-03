@@ -26,33 +26,35 @@
          <a href="{% url 'users:login' %}" class="login">Login</a>
          </div>
          </div>
-         <div class="input-line">
+         </div>
+
+        <div class="input-line">
          
       <div class="input-wrap">
-         <form method="get" action="{% url 'shop_app:search_result' %}">
+        <div class="container">        
+         <form class='search' method="get" action="{% url 'shop_app:search_result' %}">
           <input type="text" name='q' placeholder="Искать здесь...">
           <button type="submit"></button>
          </form>
+        </div>
        </div>
          </div>
          </section>
-       </div>        
+      
      </header>
-     
+
         {%block content%}
+        {%endblock%}
+        
+
+        {% block genre %}
         {%endblock%}
         
         {%block result%}
         {%endblock%}
 
-          
-    </section>
-     </main>
-  
     <footer>
-      <div class="container">
         <p>Pavlik-Ravlik Corporation, All Right Reserved</p>
-      </div>
     </footer>
       
 </body>

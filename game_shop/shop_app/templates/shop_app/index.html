@@ -20,12 +20,13 @@
 
       
       <div class="btn-pagination">
-        {% if games.has_previous %}
-            <a href="{% url 'shop_app:main_paginate' games.previous_page_number %}" class="'btn-prev"> ← Previous</a>
-        {% endif %}
 
+        {% if games.has_previous %}
+            <a href="{% url 'shop_app:main_paginate' games.previous_page_number %}" class="btn-prev"> ← Previous</a>
+        {% endif %}
+        
         {% if games.has_next %}
-            <a href="{% url 'shop_app:main_paginate' games.next_page_number %}" class="'btn-next"> → Next</a>
+            <a href="{% url 'shop_app:main_paginate' games.next_page_number %}" class="btn-next"> → Next</a>
         {% endif %}
         </div>
       </div>
@@ -37,7 +38,9 @@
           {% endfor %}
           </ul>
         </div>
+      </section>
+    </div>
+  </main>
 
-
-          
+     
 {% endblock %}

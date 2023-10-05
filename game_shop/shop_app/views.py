@@ -21,6 +21,8 @@ def game_detail(request, game_title):
 def genre_detail(request, genre_id):
     genre = get_object_or_404(Genre, id=genre_id)
     games = genre.game_set.all()  # Получите список игр, связанных с выбранным жанром
+    if not games:
+        return render(request, 'shop_app/genre_none.html')
     return render(request, 'shop_app/genre_detail.html', {'genre': genre, 'games': games})
 
 

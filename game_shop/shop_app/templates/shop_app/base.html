@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavlik Ravlik Ltd &#xae</title>
+    <title>Game Shop Ltd &#xae</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
     {%load static%}
     <link rel="stylesheet" href="{% static 'shop_app/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'shop_app/styles.css' %}">
 
 </head>
 
@@ -22,8 +23,14 @@
          </div>
          
          <div class="login-wrap">
+         {% if user.is_authenticated %}
+         
+         <a href="{% url 'users:profile' %}" class="login">Profile {{user.username}}</a>
+         <a href="{% url 'users:logout' %}" class="signup">logout</a>
+         {% else %}
          <a href="{% url 'users:signup' %}" class="signup">SignUp</a>
          <a href="{% url 'users:login' %}" class="login">Login</a>
+         {% endif %}
          </div>
          </div>
          </div>

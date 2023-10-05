@@ -12,7 +12,11 @@
         <div class="game-info">
             <img src="/media/{{game_detail.path}}" alt="Poster" width="200" height="300">
             <p><strong>Price:</strong> {{ game_detail.price }} $</p>
-            <button type="submit" > Buy</button>       
+            {% if user.is_authenticated %}
+            <button type="submit" > Buy</button>
+            {% else %}
+            <p> You must be a authenticated for buy this game.</p>
+            {% endif %}       
         </div>
     
     <div>

@@ -20,6 +20,13 @@ li {
   box-sizing: border-box;
 } */
 
+body {
+  background-image: url('/static/shop_app/backgrounds.jpeg'); /* Путь к изображению */
+  background-size: cover; /* Растягиваем изображение на весь экран */
+  background-repeat: no-repeat;
+}
+
+
 .container {
   max-width: 991px;
   margin: 0 auto;
@@ -79,12 +86,12 @@ header {
 }
 .input-line {
   max-width: 100%;
-  background-color: rgb(27, 122, 75);
+  background-color: rgb(12, 3, 141);
   padding: 10px 0px;
 }
 
 .input-wrap {
-  background: rgb(27, 122, 75);
+  background: rgb(12, 3, 141);
   position: relative;
 }
 .input-wrap:after {
@@ -104,7 +111,7 @@ header {
   height: 42px;
   padding-left: 15px;
   border-radius: 42px;
-  border: 2px solid rgb(55, 0, 255);
+  border: 2px solid rgb(12, 3, 141);
   background: #f9f0da;
   outline: none;
   position: relative;
@@ -200,7 +207,7 @@ header {
   width: 100%;
   border-radius: 5%;
   text-align: center;
-  background-color:  rgb(27, 122, 75);
+  background-color:  rgb(12, 3, 141);
   padding: 5px;
   transition-property: transform;
   transition-duration: 100ms;
@@ -243,12 +250,12 @@ header {
 }
 
 .btn-pagination > a:hover {
-  background-color: rgb(27, 122, 75);
+  background-color: rgb(12, 3, 141);
   color:rgb(255, 255, 255)
 }
 
 footer {
-  background-color: rgb(27, 122, 75);
+  background-color: rgb(12, 3, 141);
   color: #ffffff;
   text-align: center;
   padding: 10px;
@@ -260,7 +267,7 @@ footer {
 }
 
 footer{
-  background-color: rgb(27, 122, 75);
+  background-color: rgb(12, 3, 141);
 }
 
 /* --------------------------------------------------------------------------------------------------------Media-------------- */

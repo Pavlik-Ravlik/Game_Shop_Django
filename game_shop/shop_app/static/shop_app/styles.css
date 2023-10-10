@@ -21,8 +21,8 @@ li {
 } */
 
 body {
-  background-image: url('/static/shop_app/backgrounds.jpeg'); /* Путь к изображению */
-  background-size: cover; /* Растягиваем изображение на весь экран */
+  background-image: url('/static/shop_app/backgrounds.jpeg');
+  background-size: cover;
   background-repeat: no-repeat;
 }
 

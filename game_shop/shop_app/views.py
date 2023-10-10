@@ -4,6 +4,7 @@ from .models import Game, Genre
 from django.core.paginator import Paginator
 
 
+
 def main(request, page=1):
     games = Game.objects.all()
     genres = Genre.objects.all().order_by('name')
